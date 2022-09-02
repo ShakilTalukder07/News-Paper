@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All of your answers</title>
+
+    <!-- link daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div tabindex="3" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <div>
+            <div class="collapse-title text-xl font-medium">
+                What's the difference between Var, Let and Const ?
+            </div>
+            <div class="collapse-content">
+                <p>Var
+                    Before the advent of ES6, var declarations ruled. There are issues associated with variables
+                    declared with var, though. That is why it was necessary for new ways to declare variables to emerge.
+                    First, let's get to understand var more before we discuss those issues.
+
+                    Scope of var
+                    Scope essentially means where these variables are available for use. var declarations are globally
+                    scoped or function/locally scoped.
+
+                    The scope is global when a var variable is declared outside a function. This means that any variable
+                    that is declared with var outside a function block is available for use in the whole window.</p>
+                <br>
+                <br>
+                <p>Let
+                    let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var
+                    declarations. It also solves the problem with var that we just covered. Let's consider why this is
+                    so.
+
+                    let is block scoped
+                    A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly
+                    braces is a block.
+
+                    So a variable declared in a block with let is only available for use within that block. </p>
+                <br>
+                <br>
+                <p>Const
+                    Variables declared with the const maintain constant values. const declarations share some
+                    similarities with let declarations.
+
+                    const declarations are block scoped
+                    Like let declarations, const declarations can only be accessed within the block they were declared.
+
+                    const cannot be updated or re-declared
+                    This means that the value of a variable declared with const remains the same within its scope. It
+                    cannot be updated or re-declared.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="collapse-title text-xl font-medium">
+            What's the difference between Arrow function and Normal function?
+        </div>
+        <div class="collapse-content">
+            <p>Unlike regular functions, arrow functions do not have their own this . The value of this inside an arrow function remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.</p>
+        </div>
+    </div>
+    </div>
+    <div>
+        <div class="collapse-title text-xl font-medium">
+            Ahy should we use template string ?
+        </div>
+        <div class="collapse-content">
+            <p>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements.</p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
