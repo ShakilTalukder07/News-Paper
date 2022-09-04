@@ -53,7 +53,7 @@ const loadAllNews = async (category_id) => {
 
     // ===========Spinner Start======//
 
-    // toggleSpinner(true);
+    toggleSpinner(true);
 
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
 
@@ -61,12 +61,9 @@ const loadAllNews = async (category_id) => {
     const data = await res.json();
     
     displayNewsItem(data.data);
-    
 }
 
 const displayNewsItem = newsAll => {
-    
-
     
     newsAll.sort((a, b) => {
         return b.total_view - a.total_view;
@@ -85,14 +82,10 @@ const displayNewsItem = newsAll => {
     else {
         noNews.classList.add('d-none');
     }
-
-
     
     const newsContainer = document.getElementById('news-container');
     newsContainer.textContent = '';
     newsAll.forEach(news => {
-
-
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="container card mb-3"">
@@ -132,7 +125,7 @@ const displayNewsItem = newsAll => {
 
     // =============Spinner Stop==============//
 
-    // toggleSpinner(false);
+    toggleSpinner(false);
 
 }
 
@@ -155,17 +148,16 @@ const displayNewsDetails = newsDetails => {
     <p class="card-text">${newsDetails.details}</p>
     </div>
     </div>
-    
 
     <div class="mb-3 mt-5" >
             <div class="d-flex justify-content-between row g-0">
                 <div class="col-md-2">
                     <img src="${newsDetails.author.img ? newsDetails.author.img : 'Author Image not found'}" style="width: 50px; height: 50px;" class="rounded-circle" alt="...">
                 </div>
+
                 <div class="col-md-6">
                     <h5 class="title">${newsDetails.author.name ? newsDetails.author.name : 'Author is not found'}</h5>
                     <p class="text">${newsDetails.author.published_date ? newsDetails.author.published_date : 'Author Published date not found'}</p>
-
                 </div>
 
                 <div class="col-md-4">
