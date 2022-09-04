@@ -1,6 +1,6 @@
 
 body{
-    background-color: #dcdde1;
+    background-color: #f6f6f9;
 }
 .items{
    font-size: 18px; 
@@ -11,7 +11,7 @@ body{
 }
 
 #subscribe:hover{
-    background-color: #ff4d4d !important;
+    background-color: #ec0e0e !important;
     
 }
 #logo{
@@ -23,6 +23,6 @@ h3{
     font-weight: 600;
     font-size: 35px;
 }
-#footer{
-    background-color: #CAD3C8;
-}
+/* #footer{
+    background-color: hsl(90, 1%, 31%);
+} */
